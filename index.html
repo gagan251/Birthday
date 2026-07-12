@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#6c4cff" />
+  <title>Birthday Surprise</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="confettiCanvas" aria-hidden="true"></canvas>
+  <div class="stars" aria-hidden="true"></div>
+
+  <main class="app">
+    <section class="screen active" id="welcomeScreen">
+      <div class="glass-card welcome-card">
+        <div class="mini-badge">A little surprise for you ✨</div>
+        <h1>Someone special<br><span>has a birthday today!</span></h1>
+        <p>Tap the gift and begin the celebration.</p>
+
+        <button class="gift" id="openGift" aria-label="Open birthday gift">
+          <span class="gift-lid"><span class="gift-bow"></span></span>
+          <span class="gift-box"></span>
+          <span class="gift-glow"></span>
+        </button>
+        <button class="primary-btn" id="startButton">Open your surprise 🎁</button>
+      </div>
+    </section>
+
+    <section class="screen" id="birthdayScreen">
+      <div class="balloons" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+
+      <div class="glass-card birthday-card">
+        <p class="eyebrow">Today is all about you</p>
+        <h2>Happy Birthday, <span id="birthdayName">Beautiful Soul</span>!</h2>
+        <p class="wish" id="wishText"></p>
+
+        <div class="cake-wrap" id="cakeWrap">
+          <div class="cake">
+            <div class="candle">
+              <div class="flame" id="flame"></div>
+              <div class="wick"></div>
+            </div>
+            <div class="cake-top">
+              <i></i><i></i><i></i><i></i><i></i>
+            </div>
+            <div class="cake-layer layer-one"></div>
+            <div class="cake-layer layer-two"></div>
+            <div class="plate"></div>
+          </div>
+        </div>
+
+        <p class="instruction" id="instruction">Make a wish, then tap the candle to blow it out.</p>
+
+        <div class="actions">
+          <button class="primary-btn" id="blowButton">Blow the candle 🕯️</button>
+          <button class="secondary-btn" id="celebrateButton">Celebrate 🎉</button>
+        </div>
+
+        <div class="message-card hidden" id="finalMessage">
+          <span>💖</span>
+          <h3>Your new chapter begins now</h3>
+          <p>May your year be filled with courage, peace, laughter, success and unforgettable memories.</p>
+        </div>
+      </div>
+
+      <button class="music-btn" id="musicButton" aria-label="Toggle music">♫</button>
+    </section>
+  </main>
+
+  <audio id="birthdayMusic" loop preload="none">
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_4b04f92d5c.mp3?filename=happy-birthday-to-you-piano-version-13976.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
